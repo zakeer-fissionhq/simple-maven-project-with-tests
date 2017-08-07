@@ -5,7 +5,7 @@ pipeline {
     
     }
     stages {
-        stage ('Initialize') {
+        stage ('Initialization') {
             steps {
                 sh '''
                     echo "PATH = ${PATH}"
@@ -14,14 +14,14 @@ pipeline {
             }
         }
 
-        stage ('Build') {
+        stage ('Building') {
             steps {
                 sh 'mvn -Dmaven.test.failure.ignore=true install' 
             }
           
         }
 
-          stage ('Compile') {
+          stage ('Compiling') {
             steps {
                sh 'mvn clean compile'
             }
