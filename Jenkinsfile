@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh '''
                     export "JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk"
-                    export "PATH=${JAVA_HOME}:${PATH}
+                    export "PATH=${JAVA_HOME}:${PATH}"
                 '''
                 sh 'mvn -Dmaven.test.failure.ignore=true install' 
             }
