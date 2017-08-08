@@ -18,7 +18,7 @@ pipeline {
         stage ('Building') {
             steps {
                 sh 'source /etc/profile'
-                sh 'mvn -Dmaven.test.failure.ignore=true install' 
+                sh 'mvn install' 
             }
           
         }
